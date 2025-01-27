@@ -65,6 +65,7 @@ where
 
 -- 1) SQL queiry  retrieve all the records from the table
 select * from R_Store;
+<br>
 -- 2) sql query filter rows where sales_amount is greater than 1000
 select * from R_Store where total_sale > 1000;
 -- 3) sql query sort the data by sales_amount in descending order
