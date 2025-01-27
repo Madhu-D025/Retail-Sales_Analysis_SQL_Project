@@ -64,29 +64,51 @@ where
 '''
 
 -- 1) SQL queiry  retrieve all the records from the table
+<br>
 select * from R_Store;
 <br>
 -- 2) sql query filter rows where sales_amount is greater than 1000
+<br>
 select * from R_Store where total_sale > 1000;
+<br>
 -- 3) sql query sort the data by sales_amount in descending order
+<br>
 select * from R_Store order by total_sale desc;
+<br>
 -- 4) sql query to filter data with multiple conditions, such as region = 'North' and sales_amount > 1000
+<br>
 select * from R_Store where category = 'Clothing' and total_sale > 1000;
+<br>
 -- 5) sql query to group sales by product_category and calculate the total sales for each category
+<br>
 select category, sum(total_sale) as Total_Sales from R_Store group by category;
+<br>
 -- 6) sql query retrieve the top 10 records with the highest sales_amount
+<br>
 select * from R_Store order by total_sale desc limit 10;
+<br>
 -- 7) Write a SQL query to retrieve all columns for sales made on '2022-11-05:
+<br>
 select * from R_Store where sale_date = '2022-11-05';
+<br>
 -- 8) Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022:
+<br>
 select * from R_Store where category = 'Clothing' and date_format(sale_date, '%Y-%m') = '2022-11' and quantiy >= 4;
+<br>
 -- 9) Write a SQL query to calculate the total sales (total_sale) for each category.:
+<br>
 select category, sum(total_sale) from R_Store group by category;
+<br>
 -- 10) Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.
+<br>
 select avg(age) from R_Store where category = 'Beauty';
+<br>
 -- 11) Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.
+<br>
 select gender, count(transactions_id) from R_Store group by gender;
+<br>
 -- 12) Write a SQL query to find the number of unique customers who purchased items from each category.: 
+<br>
 select category, count(distinct customer_id) from R_Store group by category;
 
 
