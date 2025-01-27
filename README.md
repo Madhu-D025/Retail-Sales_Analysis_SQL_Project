@@ -17,19 +17,32 @@ The main objective of this project is to analyze retail sales data to uncover ke
 - Table Creation: A table named retail_sales is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 '''sql
-create table R_Store
-(
-    transactions_id int primary key,
-    sale_date Date,
-    sale_time Time,
-    customer_id int,
-    gender varchar(15),
-    age int,
-    category varchar(15),
-    quantiy int,
-    price_per_unit int,
-    cogs int,
-    total_sale int
+CREATE DATABASE p1_retail_db;
+
+CREATE TABLE retail_sales
+
+transactions_id INT PRIMARY KEY,
+
+sale date DATE,
+
+sale time TIME,
+
+customer_id INT
+
+gender VARCHAR(10),
+
+age INT,
+
+category VARCHAR(35),
+
+quantity INT,
+
+price_per_unit FLOAT,
+
+cogs FLOAT,
+
+total sale FLOAT
+
 );
 '''
 
